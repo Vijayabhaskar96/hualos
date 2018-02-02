@@ -42,7 +42,7 @@ def publish():
     try:
         data = json.loads(payload)
     except:
-        return {'error':'invalid payload'}
+        return jsonify({'error':'invalid payload'})
 
     def notify():
         msg = str(time.time())
